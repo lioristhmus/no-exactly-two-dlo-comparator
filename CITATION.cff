@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the paper and the archived Lean formalization when using this certificate."
+title: "Comparator Certificate for No Set Carries Exactly Two Dense Linear Orders without Endpoints"
+type: software
+authors:
+  - given-names: Lior
+    family-names: Isthmus
+    orcid: "https://orcid.org/0009-0004-7908-9876"
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/lioristhmus/no-exactly-two-dlo-comparator"
+references:
+  - type: unpublished
+    title: "No Set Carries Exactly Two Dense Linear Orders without Endpoints: A Cut-Rotation Proof in a Weak Zermelo Theory without Choice or Replacement"
+    authors:
+      - given-names: Lior
+        family-names: Isthmus
+    url: "https://github.com/lioristhmus/no-exactly-two-dlo"
+  - type: software
+    title: "No Set Carries Exactly Two Dense Linear Orders without Endpoints: Lean 4 Formalization"
+    authors:
+      - given-names: Lior
+        family-names: Isthmus
+    url: "https://github.com/lioristhmus/no-exactly-two-dlo-lean"

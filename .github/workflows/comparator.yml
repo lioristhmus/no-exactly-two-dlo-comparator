@@ -1,0 +1,59 @@
+name: Lean Comparator certificate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ordinary-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1
+        with:
+          build: false
+          test: false
+      - name: Fetch trusted dependency caches
+        run: lake exe cache get
+      - name: Check source invariants and build both modules
+        run: bash scripts/check-source.sh
+
+  sandboxed-comparator:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/setup-go@7a3fe6cf4cb3a834922a1244abfce67bcef6a0c5 # v6.2.0
+        with:
+          go-version: "1.24.x"
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1
+        with:
+          build: false
+          test: false
+          use-github-cache: false
+          use-mathlib-cache: false
+      - name: Record runner environment
+        run: |
+          uname -a
+          printf 'ImageOS=%s\nImageVersion=%s\n' "${ImageOS:-unknown}" "${ImageVersion:-unknown}"
+      - name: Build pinned Comparator, lean4export, and Landrun
+        run: bash scripts/build-comparator-tools.sh "$RUNNER_TEMP/no2-comparator-tools"
+      - name: Fetch trusted dependency caches before sandboxing
+        run: lake exe cache get
+      - name: Check locked dependency materialization
+        run: python3 scripts/check-project-pins.py
+      - name: Run Comparator in the guarded Landrun sandbox
+        run: |
+          runner_uid="$(id -u)"
+          sudo loginctl enable-linger "$USER"
+          sudo systemctl start "user@${runner_uid}.service"
+          export XDG_RUNTIME_DIR="/run/user/${runner_uid}"
+          export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
+          bash scripts/run-comparator-linux.sh "$RUNNER_TEMP/no2-comparator-tools/bin"

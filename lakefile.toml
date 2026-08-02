@@ -1,0 +1,19 @@
+name = "NoExactlyTwoDloComparator"
+version = "1.0.0"
+defaultTargets = ["Challenge", "Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "5e932f97dd25535344f80f9dd8da3aab83df0fe6"
+
+[[require]]
+name = "NoExactlyTwoDlo"
+git = "https://github.com/lioristhmus/no-exactly-two-dlo-lean.git"
+rev = "162ef5991f6548b62776eb9abbbda1c9aaf81fb9"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
