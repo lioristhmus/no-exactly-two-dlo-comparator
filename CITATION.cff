@@ -7,6 +7,7 @@ authors:
     family-names: Isthmus
     orcid: "https://orcid.org/0009-0004-7908-9876"
 version: 1.0.0
+date-released: "2026-08-03"
 license: Apache-2.0
 repository-code: "https://github.com/lioristhmus/no-exactly-two-dlo-comparator"
 references:
