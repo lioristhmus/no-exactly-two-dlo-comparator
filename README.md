@@ -9,10 +9,12 @@ certificate for the headline endpoint of:
 
 The paper release package is in
 [`no-exactly-two-dlo`](https://github.com/lioristhmus/no-exactly-two-dlo), with
-reserved paper version DOI
+published paper version DOI
 [`10.5281/zenodo.21765207`](https://doi.org/10.5281/zenodo.21765207).
 The full Lean development is in
-[`no-exactly-two-dlo-lean`](https://github.com/lioristhmus/no-exactly-two-dlo-lean).
+[`no-exactly-two-dlo-lean`](https://github.com/lioristhmus/no-exactly-two-dlo-lean),
+archived under software version DOI
+[`10.5281/zenodo.21765391`](https://doi.org/10.5281/zenodo.21765391).
 
 ## What is checked
 

@@ -23,4 +23,5 @@ references:
     authors:
       - given-names: Lior
         family-names: Isthmus
+    doi: "10.5281/zenodo.21765391"
     url: "https://github.com/lioristhmus/no-exactly-two-dlo-lean"
