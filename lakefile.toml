@@ -10,7 +10,7 @@ rev = "5e932f97dd25535344f80f9dd8da3aab83df0fe6"
 [[require]]
 name = "NoExactlyTwoDlo"
 git = "https://github.com/lioristhmus/no-exactly-two-dlo-lean.git"
-rev = "162ef5991f6548b62776eb9abbbda1c9aaf81fb9"
+rev = "6da79f2e188f184f13bde45cf5715ca4c9d0cdb1"
 
 [[lean_lib]]
 name = "Challenge"
