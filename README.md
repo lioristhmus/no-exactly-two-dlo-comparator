@@ -7,11 +7,12 @@ certificate for the headline endpoint of:
 > Endpoints: A Cut-Rotation Proof in a Weak Zermelo Theory without Choice or
 > Replacement*.
 
-The paper release package is in
-[`no-exactly-two-dlo`](https://github.com/lioristhmus/no-exactly-two-dlo), with
-published paper version DOI
-[`10.5281/zenodo.21765207`](https://doi.org/10.5281/zenodo.21765207).
-The full Lean development is in
+The paper is available from
+[GitHub](https://github.com/lioristhmus/no-exactly-two-dlo),
+[Project Diderot](https://projectdiderot.com/papers/7f4647bf-b0ef-40dd-a347-a27088cf40d1),
+and [Zenodo](https://doi.org/10.5281/zenodo.21765207). The Diderot record carries
+the author-issued Formal Verification certificate linking this repository and
+the full Lean development. The latter is in
 [`no-exactly-two-dlo-lean`](https://github.com/lioristhmus/no-exactly-two-dlo-lean),
 archived under software version DOI
 [`10.5281/zenodo.21765391`](https://doi.org/10.5281/zenodo.21765391).

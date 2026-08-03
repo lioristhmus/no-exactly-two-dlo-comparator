@@ -17,7 +17,7 @@ references:
       - given-names: Lior
         family-names: Isthmus
     doi: "10.5281/zenodo.21765207"
-    url: "https://doi.org/10.5281/zenodo.21765207"
+    url: "https://projectdiderot.com/papers/7f4647bf-b0ef-40dd-a347-a27088cf40d1"
   - type: software
     title: "No Set Carries Exactly Two Dense Linear Orders without Endpoints: Lean 4 Formalization"
     authors:
