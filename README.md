@@ -8,7 +8,9 @@ certificate for the headline endpoint of:
 > Replacement*.
 
 The paper release package is in
-[`no-exactly-two-dlo`](https://github.com/lioristhmus/no-exactly-two-dlo).
+[`no-exactly-two-dlo`](https://github.com/lioristhmus/no-exactly-two-dlo), with
+reserved paper version DOI
+[`10.5281/zenodo.21765207`](https://doi.org/10.5281/zenodo.21765207).
 The full Lean development is in
 [`no-exactly-two-dlo-lean`](https://github.com/lioristhmus/no-exactly-two-dlo-lean).
 
@@ -58,7 +60,7 @@ repositories; this small repository does not claim to duplicate those audits.
 |---|---|
 | Lean | `v4.29.1` |
 | Mathlib | `5e932f97dd25535344f80f9dd8da3aab83df0fe6` |
-| exact-two formalization | `6da79f2e188f184f13bde45cf5715ca4c9d0cdb1` |
+| exact-two formalization | `bfa29d66e1850cc881ebdf191bd907bac8af1eda` |
 | exact-three dependency | `ca5d9488552e68fd64ffb0da05912c3fa68d78c9` (`v1.0.0`) |
 | Comparator source | `2a00b30df5e9173e70c4e4ec669fdf03da3163b9` (`v4.29.0`) |
 | lean4export | `6f4e21dd70c3c11d7fbd07d39e3192792c657448` (`v4.29.1`) |

@@ -11,7 +11,7 @@ from pathlib import Path
 EXPECTED = {
     "NoExactlyTwoDlo": (
         "https://github.com/lioristhmus/no-exactly-two-dlo-lean.git",
-        "6da79f2e188f184f13bde45cf5715ca4c9d0cdb1",
+        "bfa29d66e1850cc881ebdf191bd907bac8af1eda",
         False,
     ),
     "NoExactlyThreeDlo": (
